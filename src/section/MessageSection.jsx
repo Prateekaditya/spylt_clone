@@ -42,6 +42,8 @@ const MessageSection = () => {
             scrollTrigger:{
                 trigger:".msg-text-scroll",
                 start:"top 60%",
+                end:"bottom 60%",
+                scrub:true,
             }
         })
         revealTl.to(".msg-text-scroll",{
