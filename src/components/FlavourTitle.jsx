@@ -39,7 +39,26 @@ const FlavorTitle = () => {
         start: "top 1%",
       },
     });
+    const titletl= gsap.timeline({
+      scrollTrigger:{
+        trigger:".flavor-section",
+        start:"top top",
+        end:"bottom 80%",
+        scrub:true,
+      }
+    })
+    titletl.to(".first-text-split",{
+      xPercent:-30,
+      ease:"power1.inOut",
+    }).to(".flavor-text-scroll",{
+      xPercent:-22,
+      ease:"power1.inOut"
+    },"<").to(".second-text-split",{
+      xPercent:-12,
+      ease:"power1.inOut"
+    },"<")
   });
+
 
   return (
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16">
